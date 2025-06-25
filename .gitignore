@@ -137,5 +137,11 @@ pred_for_gt_checking.py
 tmp
 *.json
 mano
-HO3D_dataset/
-
+HO3D_dataset/HO3D/calibration
+HO3D_dataset/HO3D/evaluation
+HO3D_dataset/HO3D/manual_annotations
+HO3D_dataset/HO3D/HO3D_v3_segmentations_rendered
+HO3D_dataset/HO3D/train
+HO3D_dataset/HO3D_V3_GT
+HO3D_dataset/mano_v1_2
+HO3D_dataset/YCB_Video_Models
