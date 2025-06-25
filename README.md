@@ -78,14 +78,13 @@ This repository contains a collection of scripts for:
     python setup_mano.py ${MANO_PATH}
     ```
     
-4. Download the YCB object models by clicking on `The YCB-Video 3D Models` in [https://rse-lab.cs.washington.edu/projects/posecnn/]. Assume ${YCB_PATH}
-is the path where you unpacked the object models into (path to where _models_ folder branches off)
+4. Download the YCB object models by clicking on `The YCB-Video 3D Models` in [https://rse-lab.cs.washington.edu/projects/posecnn/]. Assume `${YCB_PATH}` is the path where you unpacked the object models into (path to where _models_ folder branches off)
 
 5. Download the HO-3D dataset. See project page for instructions. 
     
-6. Assuming ${DB_PATH} is the path to where you unpacked the dataset (path to where _./train/_ and _./evaluation/_ folder branch off), 
+6. Assuming `${DB_PATH}` is the path to where you unpacked the dataset (path to where _./train/_ and _./evaluation/_ folder branch off), 
 This should enable you to run the following to show some dataset samples.
-    ```
+    ``` bash
     python vis_HO3D.py ${DB_PATH} ${YCB_PATH}
     python vis_HO3D.py ${DB_PATH} ${YCB_PATH} -split 'evaluation'
     python vis_HO3D.py ${DB_PATH} ${YCB_PATH} -visType 'open3d'

@@ -152,10 +152,10 @@ if __name__ == '__main__':
             contactMesh.trans[:] = np.array([0., 0., 1.0])
             contactCols = np.zeros((contactMesh.r.shape[0], 3))
             contactCols[:, 2] = anno['handVertContact']
-            contactMeshO3d = open3d.geometry.TriangleMesh()
-            contactMeshO3d.vertices = open3d.utility.Vector3dVector(np.copy(contactMesh.r))
-            contactMeshO3d.triangles = open3d.utility.Vector3iVector(contactMesh.f)
-            contactMeshO3d.vertex_colors = open3d.utility.Vector3dVector(contactCols)
+            contactMeshO3d = open3d.TriangleMesh()
+            contactMeshO3d.vertices = open3d.Vector3dVector(np.copy(contactMesh.r))
+            contactMeshO3d.triangles = open3d.Vector3iVector(contactMesh.f)
+            contactMeshO3d.vertex_colors = open3d.Vector3dVector(contactCols)
 
             contactMapHand = o3dWin.capture_view([contactMeshO3d], 'utils/hand_r.txt')
 

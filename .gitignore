@@ -137,4 +137,5 @@ pred_for_gt_checking.py
 tmp
 *.json
 mano
+HO3D_dataset/
 

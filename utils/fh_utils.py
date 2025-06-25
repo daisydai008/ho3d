@@ -250,21 +250,21 @@ def open3dVisualize(mList, colorList):
     import open3d
     o3dMeshList = []
     for i, m in enumerate(mList):
-        mesh = open3d.geometry.TriangleMesh()
+        mesh = open3d.TriangleMesh()
         numVert = 0
         if hasattr(m, 'r'):
-            mesh.vertices = open3d.utility.Vector3dVector(np.copy(m.r))
+            mesh.vertices = open3d.Vector3dVector(np.copy(m.r))
             numVert = m.r.shape[0]
         elif hasattr(m, 'v'):
-            mesh.vertices = open3d.utility.Vector3dVector(np.copy(m.v))
+            mesh.vertices = open3d.Vector3dVector(np.copy(m.v))
             numVert = m.v.shape[0]
         else:
             raise Exception('Unknown Mesh format')
-        mesh.triangles = open3d.utility.Vector3iVector(np.copy(m.f))
+        mesh.triangles = open3d.Vector3iVector(np.copy(m.f))
         if colorList[i] == 'r':
-            mesh.vertex_colors = open3d.utility.Vector3dVector(np.tile(np.array([[1., 0., 0.]]), [numVert, 1]))
+            mesh.vertex_colors = open3d.Vector3dVector(np.tile(np.array([[1., 0., 0.]]), [numVert, 1]))
         elif colorList[i] == 'b':
-            mesh.vertex_colors = open3d.utility.Vector3dVector(np.tile(np.array([[0., 0., 1.]]), [numVert, 1]))
+            mesh.vertex_colors = open3d.Vector3dVector(np.tile(np.array([[0., 0., 1.]]), [numVert, 1]))
         else:
             raise Exception('Unknown mesh color')
 
