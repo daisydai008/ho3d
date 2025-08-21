@@ -88,6 +88,10 @@ This should enable you to run the following to show some dataset samples.
     python vis_HO3D.py ${DB_PATH} ${YCB_PATH}
     python vis_HO3D.py ${DB_PATH} ${YCB_PATH} -split 'evaluation'
     python vis_HO3D.py ${DB_PATH} ${YCB_PATH} -visType 'open3d'
+
+    python vis_HO3D.py /home/daisy/Desktop/Work_Dexrobot/ho3d/HO3D_dataset/HO3D
+      /home/daisy/Desktop/Work_Dexrobot/ho3d/HO3D_dataset/YCB_Video_Models -split train -seq MC1 -id 0000
+      -visType open3d
     
     python vis_H2O3D.py ${DB_PATH} ${YCB_PATH}
     python vis_H2O3D.py ${DB_PATH} ${YCB_PATH} -split 'evaluation'

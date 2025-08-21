@@ -70,7 +70,7 @@ def create_annotated_video(base_dir, seq_name, output_dir, load_model_func, mode
     # Setup video writer
     output_path = os.path.join(output_dir, '{}_annotated.avi'.format(seq_name))
     fourcc = 1196444237  # MJPG fourcc value that works
-    video_writer = cv2.VideoWriter(output_path, fourcc, 15.0, (width, height))
+    video_writer = cv2.VideoWriter(output_path, fourcc, 45.0, (width, height))
     
     if not video_writer.isOpened():
         print("Failed to open video writer")
@@ -171,7 +171,7 @@ def create_simple_video(base_dir, seq_name, output_dir):
     output_path = os.path.join(output_dir, '{}_simple.avi'.format(seq_name))
     # Use integer fourcc value for MJPG (known to work from earlier test)
     fourcc = 1196444237  # This is the MJPG fourcc value from our earlier test
-    video_writer = cv2.VideoWriter(output_path, fourcc, 15.0, (width, height))
+    video_writer = cv2.VideoWriter(output_path, fourcc, 45.0, (width, height))
     
     if not video_writer.isOpened():
         print("Failed to open video writer")
@@ -203,7 +203,7 @@ def main():
     parser = argparse.ArgumentParser(description='Generate videos for MC sequences')
     parser.add_argument('ho3d_path', type=str, help='Path to HO3D dataset')
     parser.add_argument('-o', '--output', type=str, default='videos', help='Output directory')
-    parser.add_argument('-s', '--sequences', nargs='+', default=['MC1', 'MC2', 'MC4', 'MC5', 'MC6'],
+    parser.add_argument('-s', '--sequences', nargs='+', default=['GSF11'],
                        help='Sequences to process')
     parser.add_argument('--annotated', action='store_true', help='Create annotated videos with hand poses')
     
